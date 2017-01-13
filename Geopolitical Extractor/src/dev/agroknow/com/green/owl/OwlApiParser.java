@@ -12,12 +12,7 @@
  */
 package dev.agroknow.com.green.owl;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-//import gr.unipi.ds.ai.utils.text.Stemmer;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -39,7 +34,7 @@ import org.semanticweb.owlapi.search.EntitySearcher;
 
 /**
  *
- * @author akukurik
+ * @author Agroknow
  */
 public class OwlApiParser {
     private final OWLOntologyManager manager;

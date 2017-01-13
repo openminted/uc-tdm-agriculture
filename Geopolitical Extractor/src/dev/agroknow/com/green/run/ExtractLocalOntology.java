@@ -42,7 +42,7 @@ import org.w3c.dom.Element;
 
 /**
  *
- * @author SOTIRIS SON
+ * @author Agroknow
  */
 public class ExtractLocalOntology {        
     

@@ -50,7 +50,7 @@ import utilities.StopWords;
 
 /**
  *
- * @author SOTIRIS SON
+ * @author Agroknow
  */
 public class ExtractGeoPolitical {        
     

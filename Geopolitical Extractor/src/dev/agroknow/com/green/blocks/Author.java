@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author SOTIRIS SON
+ * @author Agroknow
  */
 public class Author {
     

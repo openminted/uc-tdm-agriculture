@@ -27,7 +27,7 @@ import org.apache.lucene.queryparser.classic.ParseException;
 
 /**
  *
- * @author SOTIRIS SON
+ * @author Agroknow
  */
 public class ExtractLocalVocabulary {
     

@@ -26,7 +26,7 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
 /**
  *
- * @author SOTIRIS SON
+ * @author Agroknow
  */
 public class SearchVocabulary {
     

@@ -16,7 +16,7 @@ import java.util.Comparator;
 
 /**
  *
- * @author SOTIRIS SON
+ * @author Agroknow
  */
 public class ScoreTermComparator implements Comparator<RecordTerm> {
     @Override
