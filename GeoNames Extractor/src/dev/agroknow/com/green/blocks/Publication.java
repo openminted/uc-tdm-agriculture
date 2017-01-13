@@ -17,7 +17,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author SOTIRIS SON
+ * @author Agroknow
  */
 public class Publication {
     

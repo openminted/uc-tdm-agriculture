@@ -14,7 +14,7 @@ package utilities;
 
 /**
  *
- * @author SOTIRIS SON
+ * @author Agroknow
  */
 public class StopWords {
     

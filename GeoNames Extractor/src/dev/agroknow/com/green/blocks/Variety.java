@@ -14,7 +14,7 @@ package dev.agroknow.com.green.blocks;
 
 /**
  *
- * @author SOTIRIS SON
+ * @author Agroknow
  */
 public class Variety {
     

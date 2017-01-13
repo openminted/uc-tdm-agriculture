@@ -39,7 +39,7 @@ import org.apache.lucene.util.Version;
 
 /**
  *
- * @author SOTIRIS SON
+ * @author Agroknow
  */
 public class SearchTerms {
     
