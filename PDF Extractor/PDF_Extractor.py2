@@ -1,0 +1,142 @@
+#This program is free software: you can redistribute it and/or modify
+#it under the terms of version 3 of the GNU General Public License as published by
+#the Free Software Foundation, or (at your option) any later version.
+
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+
+#You should have received a copy of the GNU General Public License
+#along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+import os;
+import subprocess;
+import shutil;
+import sys;
+
+
+from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
+from pdfminer.pdfpage import PDFPage
+from pdfminer.converter import HTMLConverter, TextConverter
+
+from pdfminer.layout import LAParams
+
+from pdfminer.pdfparser import PDFParser
+from pdfminer.pdfdocument import PDFDocument, PDFNoOutlines
+
+from os import listdir
+
+# debug option
+debug = 0
+# input option
+password = ''
+pagenos = set()
+maxpages = 0
+# output option
+outtype = 'text'
+rotation = 0
+layoutmode = 'normal'
+codec = 'utf-8'
+pageno = 1
+scale = 1
+caching = True
+showpageno = True
+laparams = LAParams()
+
+
+print 'Argument List:', str(sys.argv[1]);
+
+my_pdf_path=sys.argv[1];
+
+
+print ('Start');
+print ('Extracting Text & Images from pdf files');
+print ('Location:'+my_pdf_path);
+pdf_files = [each for each in listdir(my_pdf_path) if each.endswith('.pdf')];
+
+
+for filename in pdf_files: 
+    
+    output_folder=my_pdf_path+'/'+filename+'_extraction';
+    
+    if not os.path.exists(output_folder):
+        os.mkdir(output_folder)
+    else:
+        shutil.rmtree(output_folder)
+        os.mkdir(output_folder)
+    
+    outfile = output_folder+'/'+filename+'.txt'
+    outfp = open(outfile, 'w')          
+   
+    
+#    imagewriter = ImageWriter(my_pdf_path+'/'+filename+'_img/');
+    rsrcmgr = PDFResourceManager(caching=caching)
+    
+    if outtype == 'text':
+        device = TextConverter(rsrcmgr, outfp, codec=codec, laparams=laparams)
+    elif outtype == 'html':
+        device = HTMLConverter(rsrcmgr, outfp, codec=codec, scale=scale,layoutmode=layoutmode, laparams=laparams)
+    
+    # Get the text of the document.
+    print('Get Text')
+    fp = file(my_pdf_path+'/'+filename, 'rb')
+    interpreter = PDFPageInterpreter(rsrcmgr, device)
+    i=1;
+    for page in PDFPage.get_pages(fp, pagenos,maxpages=maxpages, password=password, caching=caching, check_extractable=True):
+        page.rotate = (page.rotate+rotation) % 360
+        #print(i)
+        interpreter.process_page(page)
+        i=i+1;
+        
+    # Get the metadata of the document.
+    print('Get Metadata')
+    fp_metadata = file(output_folder+'/'+filename+'_metadata', 'w')
+    parser = PDFParser(fp)
+    doc = PDFDocument(parser)
+    parser.set_document(doc)
+    info=str(doc.info)
+    fp_metadata.write(info)
+    
+
+    # Get the outlines of the document.
+    print('Get Outline')
+    fp_outline = file(output_folder+'/'+filename+'_outline', 'w')
+    try:
+        outlines = doc.get_outlines()
+        for (level,title,dest,a,se) in outlines:
+            fp_outline.write(str(level))
+            fp_outline.write(',')
+            fp_outline.write(str(title))
+            fp_outline.write('\n')    
+    except PDFNoOutlines:
+        print('No Outline')
+    
+        
+      
+    #Get the images of the document    
+    print('Get Images')
+    subprocess.call(['pdfimages', '-all', '-p', my_pdf_path+'/'+filename, filename], cwd=output_folder) 
+    
+    # Get the DOI references of the document   
+    print('Get DOI References')
+    subprocess.call(['pdf-extract','extract-bib', '--resolved_references', my_pdf_path+'/'+filename], cwd=output_folder)
+   
+    # Get ALL the references of the document
+    print('Get ALL References')
+    subprocess.call(['pdf-extract','extract', '--references','--output',filename+'.references', my_pdf_path+'/'+filename], cwd=output_folder) 
+    
+    #Get images & captions of the document
+    print('Get Images & Captions')
+    subprocess.call(['/home/sleeper/Downloads/pdffigures-master/pdffigures','-j',filename,  my_pdf_path+'/'+filename], cwd=output_folder) 
+    
+    
+    fp.close()
+    fp_metadata.close()
+    fp_outline.close()
+    
+device.close()
+outfp.close()
+print('End');
