@@ -197,7 +197,10 @@ public class ExtractRemoteGeonames {
         if(args.length<1){
             System.out.println("No Arguments"); 
             System.out.println("Running Default Test");
-            text="This is a test, agriculture, apples and vitis with boys playing in the field. Vitis vitis and vitis again in Greece and Italy";
+            text="Vitis vinifera (common grape vine) is a species of Vitis, native to the Mediterranean region, central Europe, "
+                    + "and southwestern Asia, from Morocco and Portugal north to southern Germany and east to northern Iran.[1] "
+                    + "There are currently between 5,000 and 10,000 varieties of Vitis vinifera grapes though only a few are of "
+                    + "commercial significance for wine and table grape production.[2]";
             username="sleeper";
         
         }else{
@@ -236,12 +239,29 @@ public class ExtractRemoteGeonames {
             }            
         }
         
+        ArrayList<RecordGeoTerm> gterm_without_duplicates=new ArrayList<>();  
+        
+        for (RecordGeoTerm event : gterm) {
+            boolean isFound = false;                       
+            for (RecordGeoTerm e : gterm_without_duplicates) {                
+                if (e.getTerm().equalsIgnoreCase(event.getTerm())){                   
+                    isFound = true;                    
+                    break;
+                }           
+                
+            }
+            if (isFound==false){
+                gterm_without_duplicates.add(event);
+            }
+        }     
+        
+        
         Collections.sort(gterm, new ScoreGeoTermComparator());         
         writeXML(path,filename,gterm,"Geonames");  
         
         if(semantic==true){
-            for(int i=0;i<gterm.size();i++){
-                String term=gterm.get(i).getTerm();
+            for(int i=0;i<gterm_without_duplicates.size();i++){
+                String term=gterm_without_duplicates.get(i).getTerm();
                 String rdf=getRDFbyGeoname(username,term,maxrows);
                 writeRDF(path,filename,rdf,term);
             }
