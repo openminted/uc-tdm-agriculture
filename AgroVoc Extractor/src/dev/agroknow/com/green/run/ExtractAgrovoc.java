@@ -172,7 +172,7 @@ public class ExtractAgrovoc {
         for(String search_term : tokenized_text){
             
             response=simpleSearchByMode2(search_term,"exact",";");
-            System.out.println(response);
+            //System.out.println(response);
             String[] tokenized_response=response.split(";");
             
             for(int i=0;i<tokenized_response.length;i++){
@@ -257,8 +257,7 @@ public class ExtractAgrovoc {
             lnrt.add(rt);
         }
         
-        Collections.sort(lnrt, new ScoreTermComparator());
-        writeXML_offline(path,filename,lnrt,"local_name");
+        Collections.sort(lnrt, new ScoreTermComparator());        
         
         String label="";
         ArrayList<RecordTerm> lrt=new ArrayList<>();
@@ -269,8 +268,7 @@ public class ExtractAgrovoc {
             lrt.add(rt);
         }
         
-        Collections.sort(lrt, new ScoreTermComparator());
-        writeXML_offline(path,filename,lrt,"labels");
+        Collections.sort(lrt, new ScoreTermComparator());        
         
         String comments="";
         ArrayList<RecordTerm> crt=new ArrayList<>();
@@ -281,8 +279,15 @@ public class ExtractAgrovoc {
             crt.add(rt);
         }
         
-        Collections.sort(crt, new ScoreTermComparator());       
-        writeXML_offline(path,filename,crt,"comments");
+        Collections.sort(crt, new ScoreTermComparator());
+        
+        ArrayList<RecordTerm> all=new ArrayList<>();
+        
+        all.addAll(lnrt);
+        all.addAll(lrt);
+        all.addAll(crt); 
+        
+        writeXML_offline(path,filename,all,"AgroVoc");
         
     }
     
@@ -297,7 +302,9 @@ public class ExtractAgrovoc {
         if(args.length<1){
             System.out.println("No Arguments"); 
             System.out.println("Running Default Test");
-            text="This is a test, agriculture, apples and vitis with boys playing in the field. Vitis vitis and vitis again";
+            text="The world's great wines are produced from a relatively small number of classic European cultivars of Vitis vinifera L Most are thought to be centuries old and their origins have long been the subject of speculation1,2. Among the most prominent of these cultivars is Cabernet Sauvignon, described as \"the world's most renowned grape variety for the production of fine red wine\"3. Although now grown in many countries, "
+                    + "Cabernet Sauvignon derives its fame from its long association with the Bordeaux region of France, where it has been grown at least since the 17th century4. We present microsatellite DNA evidence for the hypothesis that Cabernet Sauvignon is the progeny of two other Bordeaux cultivars, Cabernet franc and Sauvignon blanc. Likelihood ratios support this hypothesis to a very high degree of probability. A close relationship between Cabernet Sauvignon and Cabernet franc has been suspected but the genetic contribution of Sauvignon blanc, "
+                    + "despite its similar name, is a surprise.";
             lang="en";
             AgroVocOnline(text,path,filename,lang);
         }else if(args[3].equalsIgnoreCase("1")){
