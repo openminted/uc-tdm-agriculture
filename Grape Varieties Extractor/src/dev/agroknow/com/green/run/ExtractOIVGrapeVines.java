@@ -12,24 +12,14 @@
  */
 package dev.agroknow.com.green.run;
 
+import dev.agroknow.com.green.blocks.RecordAgroVocTerm;
 import dev.agroknow.com.green.blocks.RecordGrapeVineTerm;
 import dev.agroknow.com.green.blocks.SearchTerms;
 import dev.agroknow.com.green.blocks.ScoreGrapeVineTermComparator;
-import dev.agroknow.com.green.blocks.SearchVocabulary;
-import dev.agroknow.com.green.blocks.Variety;
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.File;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -46,8 +36,6 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
 import org.apache.lucene.queryparser.classic.ParseException;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import vocabularies.OIV;
@@ -144,7 +132,11 @@ public class ExtractOIVGrapeVines {
         if(args.length<1){
             System.out.println("No Arguments"); 
             System.out.println("Running Default Test");
-            text="Goustolidi and Agiorgitiko also Aghiorghitiko while Aidani lefko";           
+            text="The world's great wines are produced from a relatively small number of classic European cultivars of Vitis vinifera L Most are thought to be centuries old and their origins have long been the subject of speculation1,2. Among the most prominent of these cultivars is Cabernet Sauvignon, "
+                    + "described as \"the world's most renowned grape variety for the production of fine red wine\"3. Although now grown in many countries, Cabernet Sauvignon derives its fame from its long association with the Bordeaux region of France, where it has been grown at least since the 17th century4. "
+                    + "We present microsatellite DNA evidence for the hypothesis that Cabernet Sauvignon is the progeny of two other Bordeaux cultivars, Cabernet franc and Sauvignon blanc. Likelihood ratios support this hypothesis to a very high degree of probability. A close relationship between "
+                    + "Cabernet Sauvignon and Cabernet franc has been suspected but the genetic contribution of Sauvignon blanc, despite its similar name, "
+                    + "is a surprise.";           
         
         }else{
             path=args[0];
@@ -176,8 +168,24 @@ public class ExtractOIVGrapeVines {
             }            
         }
         
+        ArrayList<RecordGrapeVineTerm> gpterm_without_duplicates=new ArrayList<>();  
+        
+        for (RecordGrapeVineTerm event : gpterm) {
+            boolean isFound = false;                       
+            for (RecordGrapeVineTerm e : gpterm_without_duplicates) {                
+                if (e.getTerm().equalsIgnoreCase(event.getTerm())){                   
+                    isFound = true;                    
+                    break;
+                }           
+                
+            }
+            if (isFound==false){
+                gpterm_without_duplicates.add(event);
+            }
+        }     
+        
         Collections.sort(gpterm, new ScoreGrapeVineTermComparator());         
-        writeXML(path,filename,gpterm,"GrapeVine");
+        writeXML(path,filename,gpterm_without_duplicates,"GrapeVine");
         
     }
 }
