@@ -115,8 +115,7 @@ public class ExtractGeoPolitical {
             lnrt.add(rt);
         }
         
-        Collections.sort(lnrt, new ScoreTermComparator());
-        writeXML_offline(path,filename,lnrt,"local_name");
+        Collections.sort(lnrt, new ScoreTermComparator());        
         
         String label="";
         ArrayList<RecordTerm> lrt=new ArrayList<>();
@@ -128,7 +127,6 @@ public class ExtractGeoPolitical {
         }
         
         Collections.sort(lrt, new ScoreTermComparator());
-        writeXML_offline(path,filename,lrt,"labels");
         
         String comments="";
         ArrayList<RecordTerm> crt=new ArrayList<>();
@@ -139,8 +137,15 @@ public class ExtractGeoPolitical {
             crt.add(rt);
         }
         
-        Collections.sort(crt, new ScoreTermComparator());       
-        writeXML_offline(path,filename,crt,"comments");
+        Collections.sort(crt, new ScoreTermComparator());   
+        
+        ArrayList<RecordTerm> all=new ArrayList<>();
+        
+        all.addAll(lnrt);
+        all.addAll(lrt);
+        all.addAll(crt); 
+        
+        writeXML_offline(path,filename,all,"Geopolitical");
         
     }
     
