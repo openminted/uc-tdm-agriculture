@@ -7,21 +7,29 @@
 
 == Introduction
 
-The text-mining problem to be addressed in the context of the AS-A Use Case is the extraction of structured information (domain specific topics, images / figures, captions etc.) from unstructured bibliographic resources (i.e. PDF documents).
+The text-mining problem to be addressed in the context of the AS-A Use Case is the extraction of structured information (domain specific topics, images / figures, captions etc.) from unstructured bibliographic resources (i.e. PDF documents). 
+
+More specifically, Research Articles from Viticulture are automatically annotated by text-mining pipeline, using relevant open resources (e.g. AgroVoc).
+
+The text-mining problem to be addressed in the context of the AS-B Use Case is the extraction of geolocation information from unstructured RSS feeds that target the Food Safety and the Water Health Community. 
+
+More specifically, RSS Feeds from FoodSafety and WaterWorld are automatically annotated by text-mining pipeline, using relevant open resources (e.g. GeoNames, FAO Geopolitical Ontology).
 
 == Data Processing Scenarios
 
-In AS-A, we have outlined the following data processing scenarios:
+In AS-A, we have the following data processing scenario:
 
-Scenario #1:
+Data Processing Scenario:
 
- * <<pdfextractor.adoc#, Extracting PDF Artifacts such as outline, main text, figures and tables  >>
- * <<grapevarieties.adoc#, Extracting Grape Varieties from the main text >>
- * <<agrovocextractor.adoc#, Extracting AgroVoc terms from the main text >>
+ * <<pdfextractor.adoc#, This Component extracts PDF Artifacts such as outline, main text, figures, tables, captions and references  >>
+ * <<grapevarieties.adoc#, This Component extracts Grape Variety terms (based on the official OIV grape variety list) from the main text of a PDF Document >>
+ * <<agrovocextractor.adoc#, This Component extracts AgroVoc terms (using the FAO AgroVoc Ontology) from the main text of a PDF Document >>
 
-Scenario #2:
+In AS-B, we have the following data processing scenario:
 
- * <<rssfeedreader.adoc#, Retrieve Documents from FoodSafety and WaterWorld >>
- * <<geonamesextractor.adoc#, Extract Geolocations from the retrieved RSS feeds >>
- * <<geopoliticalextractor.adoc#, Associate Geolocations with the FAO Geopolitical Ontology >>
+Data Processing Scenario:
+
+ * <<rssfeedreader.adoc#, This Component retrieves RSS Feeds from FoodSafety and WaterWorld >>
+ * <<geonamesextractor.adoc#, This Component extracts Geolocations from retrieved RSS feeds, using the Geonames Ontology >>
+ * <<geopoliticalextractor.adoc#, This Component extracts Geolocations from retrieved RSS feeds, uding the FAO Geopolitical Ontology >>
 
