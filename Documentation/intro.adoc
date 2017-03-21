@@ -1,0 +1,27 @@
+= Introduction
+:ext-relative: adoc
+
+
+
+[[sect_introduction]]
+
+== Introduction
+
+The text-mining problem to be addressed in the context of the AS-A Use Case is the extraction of structured information (domain specific topics, images / figures, captions etc.) from unstructured bibliographic resources (i.e. PDF documents).
+
+== Data Processing Scenarios
+
+In AS-A, we have outlined the following data processing scenarios:
+
+Scenario #1:
+
+ * <<pdfextractor.adoc#, Extracting PDF Artifacts such as outline, main text, figures and tables  >>
+ * <<grapevarieties.adoc#, Extracting Grape Varieties from the main text >>
+ * <<agrovocextractor.adoc#, Extracting AgroVoc terms from the main text >>
+
+Scenario #2:
+
+ * <<rssfeedreader.adoc#, Retrieve Documents from FoodSafety and WaterWorld >>
+ * <<geonamesextractor.adoc#, Extract Geolocations from the retrieved RSS feeds >>
+ * <<geopoliticalextractor.adoc#, Associate Geolocations with the FAO Geopolitical Ontology >>
+
