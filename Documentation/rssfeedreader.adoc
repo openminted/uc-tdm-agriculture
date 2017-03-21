@@ -1,0 +1,56 @@
+RSS Feed Reader
+===============
+:numbered:
+
+Component Description
+---------------------
+The RSS Feed Reader is a stand-alone component responsible for accessing, retrieving and downloading RSS Feeds from specific sources.
+
+The component is distributed as an executable JAR file, thus it can be used in any platform.
+
+RSS Feeder currently supports the Food Safety News
+footnote:[http://www.foodsafetynews.com/] and WaterWorld
+footnote:[http://www.waterworld.com/] feeds.
+
+Upon completion of its execution, it produces an XML document for each source feed, containing the RSS entries of the source as they were returned by its RSS service.
+
+<<<
+
+Component Installation
+----------------------
+
+Using the JAR Distribution
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+As an executable JAR file, the RSS Feed Reader requires solely the presence of a compatible Java Runtime Environment distribution in the host system. RSS Feed Reader is compatible with JRE 7
+footnote:[http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html].
+
+Using the Source code
+~~~~~~~~~~~~~~~~~~~~~
+Download the source code of the component from the OpenMinted GitHub repository
+footnote:[https://github.com/openminted/uc-tdm-agriculture/tree/master/RSS_Feed_Reader] and run from the command line:
+----
+ant -buildfile build.xml
+----
+
+<<<
+
+Relevant Data Processing Scenarios
+----------------------------------
+
+Obtain RSS Feeds from relevant sources
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The user aims to retrieve the retrieve and locally store the RSS feeds from the supported sources. To this end, she executes the RSS Feed Reader component from the command line:
+----
+java -jar AK_RSS_Reader.jar <path>
+----
+Upon completion, the component produces a set of XML files, following the <source>.<datetime>.xml naming pattern, denoting the source site (<source>) and the timestamp on which the retrieval of the feed took place (<datetime>).
+
+ifdef::backend-docbook[]
+[index]
+Example Index
+-------------
+////////////////////////////////////////////////////////////////
+The index is normally left completely empty, it's contents being
+generated automatically by the DocBook toolchain.
+////////////////////////////////////////////////////////////////
+endif::backend-docbook[]
