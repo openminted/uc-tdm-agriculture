@@ -4,7 +4,7 @@
 	<artifactId>AS-A</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>Text-Mining Over Bibliographic Data: AGRIS & CORE</name>
+	<name>Text-Mining Over Bibliographic Data: AGRIS and CORE</name>
 	<description>This package contains code for text mining of structured information from unstructured bibliographic resources.</description>
 	<url>https://github.com/openminted/uc-tdm-agriculture</url>
 	<organization>
