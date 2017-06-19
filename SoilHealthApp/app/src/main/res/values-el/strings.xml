@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="NumOfLay">Τώρα θα δείτε τις ερωτήσεις σχετικά με το πρώτο στρώμα.
+                  Στο τέλος θα έχετε την επιλογή να επιλέξετε εάν έχετε ένα άλλο στρώμα.
+    </string>
+
+    <string name="NumOfLay2">Βλέπετε άλλο στρώμα; </string>
+
+    <string name="UI">Δώστε ένα όνομα για το spade test</string>
+
+    <string name="GPS">Προσπάθεια απόκτησης συντεταγμένων GPS. Βεβαιωθείτε ότι έχετε ενεργοποιήσει τις υπηρεσίες τοποθεσίας.</string>
+
+
+    <string name="Mtoast">"Παρακαλώ δώστε μια έγκυρη τιμή"</string>
+    <string name="Mtoast2">"Παρακαλώ δώστε μια τιμή"</string>
+    <string name="Mtoast3">"Παρακαλώ δώστε ένα όνομα για το spade test"</string>
+    <string name="Mtoast4">"Προσπάθεια απόκτησης συντεταγμένων GPS. Βεβαιωθείτε ότι έχετε ενεργοποιήσει τις υπηρεσίες τοποθεσίας."</string>
+    <string name="Mtoast5">"Λάθος όνομα χρήστη ή κωδικός"</string>
+    <string name="Mtoast6">"Παρακαλώ δώστε μια απάντηση"</string>
+
+
+
+    <string name="spade_test_info_start">"Μην συλλέγετε ακόμη το δείγμα του εδάφους. Παρατηρήστε την επιφάνεια και συλλέξτε χρήσιμες πληροφορίες σχετικά με τη γενική κατάσταση του εδάφους.
+
+
+
+
+
+
+
+
+
+                  Όταν είστε έτοιμοι, πατήστε Επόμενο."</string>
+
+
+
+
+
+    <string name="LAYNUM_info">"Ένα στρώμα μπορεί να ταυτοποιηθεί με:
+        - συναρμολόγηση συσσωμάτωσης παρόμοιου σχήματος
+          ή / και διάστασης,
+        - ομοιογενές χρώμα,
+        - παρουσία παρόμοιων ποσοτήτων ριζών"</string>
+
+    <string name="AGDIM_info">"     Κοιτάξτε, για κάθε στρώμα, τη μέση διάσταση του.
+
+
+      Χρησιμοποιήστε τα χέρια για να σπάσετε ένα μέρος του στρώματος
+      και να εξετάστε την πιο συχνή διάσταση του."</string>
+
+
+
+    <string name="MOIST_info">"Αγγίξτε κάθε στρώμα και βοηθηθείτε από το χρώμα του εδάφους για να προσδιορίσετε πόσο υγρό είναι το δείγμα"</string>
+
+    <string name="BIODIVOTH_info">"Αναφέρετε την παρουσία εντόμων, μυριάδων, άλλων ασπόνδυλων."</string>
+
+    <string name="SQ_info">"Εξετάστε την συμπύκνωση, τη διάσταση και το σχήμα της ανάπτυξης των ριζών για να δώσετε μια συνολική αξία στο στρώμα"</string>
+
+    <string name="NOTE_info">"Εξετάστε την εναλλαγή καλλιεργειών, τη μηχανική λειτουργία ή άλλες πληροφορίες χρήσιμες για την κατανόηση των συνθηκών του εδάφους στην περιοχή του δείγματος."</string>
+    <string name="Disclaimer">"CDisclaimer: The Soil Health mobile app have been supported by funding from the European Union’s Horizon 2020 Framework Programme under grant agreement No. 688813 (CAPSELLA), and have been developed in the frame of the related pilot, powered by Agroknow" </string>
+
+
+
+
+
+
+
+
+
+</resources>

@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="NumOfLay">Now you will see the questions about the first layer.
+        In the end you will have the choice to choose if you have another layer.
+    </string>
+
+    <string name="NumOfLay2">Do you see another layer ? </string>
+
+    <string name="UI">Give a name for your spade test</string>
+
+    <string name="GPS">Trying to obtain GPS coordinates. Make sure you have location services on.</string>
+
+
+    <string name="Mtoast">"Please give a valid value"</string>
+    <string name="Mtoast2">"Please give a value"</string>
+    <string name="Mtoast3">"Please give a name for your spade test"</string>
+    <string name="Mtoast4">"Trying to obtain GPS coordinates. Make sure you have location services on."</string>
+    <string name="Mtoast5">"Wrong username or password"</string>
+    <string name="Mtoast6">"Please choose an answer"</string>
+
+
+
+
+    <string name="spade_test_info_start">"Do not collect yet the soil sample. Observe the surface and harvest useful information on the general state of the soil.
+
+
+
+
+
+
+
+
+
+                  When you are ready press Next."</string>
+
+
+
+
+
+    <string name="LAYNUM_info">"A layer can be identified by:
+    - assembly of aggregates of similar shape and/or
+      dimention;
+    - homogeneous color;
+    - presence of similar amounts of roots"</string>
+
+    <string name="AGDIM_info">"     Look, for each layer, at the average dimention of the
+     aggregates.
+
+     Use the hands for breaking a part of the layer
+     and consider the most frequent dimention of the
+     aggregates."</string>
+
+
+
+    <string name="MOIST_info">"Touch each layer and help yourself with the color of the soil to indentify how wet is the sample"</string>
+
+    <string name="BIODIVOTH_info">"Indicate presence of insects, miriapods, other invertebrates."</string>
+
+    <string name="SQ_info">"Consider compaction, dimention and shape of the aggregates and roots development to give an overall value to the layer"</string>
+
+    <string name="NOTE_info">"Consider mentioning the crop rotation, the mechanical operation or other information useful to understand the soil conditions in your sample area."</string>
+
+
+
+
+    <string name="Disclaimer">"CDisclaimer: The Soil Health mobile app have been supported by funding from the European Union’s Horizon 2020 Framework Programme under grant agreement No. 688813 (CAPSELLA), and have been developed in the frame of the related pilot, powered by Agroknow" </string>
+
+
+
+
+
+</resources>

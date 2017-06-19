@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="LoginButton">Login</string>
+    <string name="LNextButton">Next</string>
+
+
+
+    <string name="Q1NextButton">Next</string>
+    <string name="Q2NextButton">Next</string>
+    <string name="Q3NextButton">Next</string>
+    <string name="Q4NextButton">Next</string>
+    <string name="Q5NextButton">Next</string>
+    <string name="Q6NextButton">Next</string>
+    <string name="Q7NextButton">Next</string>
+    <string name="Q8NextButton">Next</string>
+    <string name="Q9NextButton">Next</string>
+    <string name="Q10NextButton">Next</string>
+    <string name="Q11NextButton">Next</string>
+    <string name="Q12NextButton">Next</string>
+    <string name="Q13NextButton">Next</string>
+    <string name="Q14NextButton">Next</string>
+    <string name="Q15NextButton">Next</string>
+    <string name="Q16NextButton">Next</string>
+    <string name="Q17NextButton">Next</string>
+    <string name="Q18NextButton">Next</string>
+    <string name="Q19NextButton">Next</string>
+    <string name="Q20NextButton">Next</string>
+    <string name="Q21NextButton">Next</string>
+    <string name="Q22NextButton">Next</string>
+    <string name="Q23NextButton">Next</string>
+    <string name="Q24NextButton">Next</string>
+    <string name="GPSButton">Open Gps</string>
+    <string name="GPSNextButton">Next</string>
+    <string name="UINextButton">Next</string>
+    <string name="UIZNextButton">Next</string>
+
+    <string name="NumOfLayNextButton">Next</string>
+
+
+    <string name="GrButton">Gr</string>
+    <string name="ItButton">It</string>
+    <string name="EnButton">En</string>
+
+
+
+    <string name="NumOfLayYesButton">Yes</string>
+    <string name="NumOfLayNoButton">No</string>
+
+    <string name="Q1SkipButton">Skip</string>
+    <string name="Q2SkipButton">Skip</string>
+    <string name="Q3SkipButton">Skip</string>
+    <string name="Q4SkipButton">Skip</string>
+    <string name="Q6SkipButton">Skip</string>
+    <string name="Q14SkipButton">Skip</string>
+    <string name="Q15SkipButton">Skip</string>
+    <string name="Q19SkipButton">Skip</string>
+    <string name="Q20SkipButton">Skip</string>
+    <string name="Q21SkipButton">Skip</string>
+    <string name="Q22SkipButton">Skip</string>
+    <string name="Q24SkipButton">Skip</string>
+
+
+
+
+    <string name="UploadButton">Upload</string>
+
+
+</resources>

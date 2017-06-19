@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="NumOfLay">Ora potrà vedere le domande sul primo strato. Alla fine si avrà la scelta di scegliere se si dispone di un altro strato.
+    </string>
+
+    <string name="NumOfLay2">Vedi un altro strato?</string>
+
+    <string name="UI">Dare un nome per il Suo spade test</string>
+
+    <string name="GPS">Cercando di ottenere le coordinate GPS. Si assicuri di avere le servizi di localizzazione abilitate</string>
+
+
+    <string name="Mtoast">" Si prega di dare un valore valido"</string>
+    <string name="Mtoast2">" Si prega di dare un valore"</string>
+    <string name="Mtoast3">"Dare un nome per il Suo spade test"</string>
+    <string name="Mtoast4">"Cercando di ottenere le coordinate GPS. Si assicuri di avere le servizi di localizzazione abilitate"</string>
+    <string name="Mtoast5">"Nome utente o password errati"</string>
+    <string name="Mtoast6">"Si prega di scegliere una risposta"</string>
+
+
+    <string name="spade_test_info_start">"Adesso puoi prendere un campione. Fai attenzione alla forza che devi impiegare per tagliare il suolo fino alla profondità della vanga. Prendi un campione profondo almeno 25 cm e spesso almeno 10 cm."</string>
+
+
+
+
+
+    <string name="LAYNUM_info">"Nel profilo del suolo uno strato può essere identificato da:
+        - aggregati di dimensione e/o forma simile;
+        - colore omogeneo;
+        - simile presenza di radici."</string>
+
+    <string name="AGDIM_info">"Osserva, per ciascuno strato identificato, la dimensione media degli aggregati. Disgrega tra le mani una parte dello strato e considera la dimensione più frequente."</string>
+
+
+
+    <string name="MOIST_info">"Tocca ciascuno strato identificato e usa a supporto la colorazione per determinare l'umidità"</string>
+
+    <string name="BIODIVOTH_info">"Indica la presenza di insetti, miriapodi, altri invertebrati."</string>
+
+    <string name="SQ_info">"Condidera il compattamento, la dimensione e la forma degli aggregati e lo sviluppo delle radici per dare un valore complessivo a ciscuno strato"</string>
+
+    <string name="NOTE_info">"Considera di segnalare le informazioni sulla rotazione colturale, le operazioni meccaniche o altre informazioni utili a capire le condizioni del suolo nell'area campionata"</string>
+
+
+    <string name="Disclaimer">"CDisclaimer: The Soil Health mobile app have been supported by funding from the European Union’s Horizon 2020 Framework Programme under grant agreement No. 688813 (CAPSELLA), and have been developed in the frame of the related pilot, powered by Agroknow" </string>
+
+
+
+
+
+
+
+</resources>
