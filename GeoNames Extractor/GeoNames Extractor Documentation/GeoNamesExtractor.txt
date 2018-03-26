@@ -8,7 +8,7 @@ The GeoNames Extractor is a stand-alone component responsible for discovering Ge
 
 The component is distributed as an executable JAR file, thus it can be used in any platform.
 
-GeoNames Extractor operates over a locally stored text file that contains the text to be analyzed for the presence of terms corresponding to entities defined within GeoNames.
+GeoNames Extractor operates over an XMI file that contains the text to be analyzed for the presence of terms corresponding to entities defined within GeoNames.
 
 Upon completion of its execution, it produces an XML document following the schema defined by a simple XSD schema, included with the distribution package of the component. Furthermore, it returns the RDF description as defined in GeoNames for each of the discovered entities.
 
