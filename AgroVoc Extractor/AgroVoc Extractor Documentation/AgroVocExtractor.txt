@@ -8,7 +8,7 @@ The AgroVoc Extractor is a stand-alone component responsible for discovering Agr
 
 The component is distributed as an executable JAR file, thus it can be used in any platform.
 
-AgroVoc Extractor operates over a locally stored text file that contains the text to be analyzed for the presence of AgroVoc terms.
+AgroVoc Extractor operates over an XMI file that contains the text to be analyzed for the presence of AgroVoc terms.
 
 Upon completion of its execution, it produces an XML document following the schema defined by a simple XSD file, included with the distribution package of the component. The XML presents the AgroVoc terms found in the document ranked according to a modification of the classic tf-idf metric.
 
@@ -44,12 +44,12 @@ Extract AgroVoc terms found in a document
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The user aims to retrieve the AgroVoc terms found in a text document, named <filename>, found in the local <path> directory. To this end, she executes the AgroVoc Extractor component from the command line:
 ----
-java -jar AK_Agrovoc.jar <path> <filename> <lang> (0|1) [ontology_path] [ontology_filename]
+java -jar AK_Agrovoc.jar <path> <lang> (0|1)
 ----
 The <lang> parameter defines the language of the input text document, expressed as an ISO 639-1 Alpha-2 code
 footnote:[http://www.iso.org/iso/language_codes].
 
-The value of the last parameter specifies if the user wants to use the FAO service (http://web.archive.org/web/20160407175423/https://bitbucket.org/aims-fao/agrovoc-web-services/) for searching a given term (1), or if she wants to use a local copy of AgroVoc (0). The local AgroVoc copy should be located in the [ontology_path] directory and should be named [ontology_filename].
+The value of the last parameter specifies if the user wants to use the FAO service (http://web.archive.org/web/20160407175423/https://bitbucket.org/aims-fao/agrovoc-web-services/) for searching a given term (1), or if she wants to use a local copy of AgroVoc (0).
 
 Upon completion, the component produces the <filename>.AgroVoc.xml file, which contains information on the presence and frequency of any AgroVoc term discovered, namely:
 
