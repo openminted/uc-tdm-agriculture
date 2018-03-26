@@ -9,7 +9,7 @@ footnote:[http://www.oiv.int/en/technical-standards-and-documents/description-of
 
 The component is distributed as an executable JAR file, thus it can be used in any platform.
 
-Grape Varieties Extractor operates over a locally stored text file that contains the text to be analyzed for the presence of grape variety names.
+Grape Varieties Extractor operates over an XMI file that contains the text to be analyzed for the presence of grape variety names.
 
 Upon completion of its execution, it produces an XML document following the schema defined by a simple XSD file, included with the distribution package of the component. The XML presents the grape variety names  found in the document ranked according to a modification of the classic tf-idf metric, along with their OIV ID.
 
