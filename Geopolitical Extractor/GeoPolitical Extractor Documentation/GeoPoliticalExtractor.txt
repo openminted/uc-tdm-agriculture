@@ -9,7 +9,7 @@ footnote:[http://www.fao.org/countryprofiles/geoinfo/en/].
 
 The component is distributed as an executable JAR file, thus it can be used in any platform.
 
-Geopolitical Extractor operates over a locally stored text file that contains the text to be analyzed for the presence of FAO Geopolitical terms.
+Geopolitical Extractor operates over an XMI file that contains the text to be analyzed for the presence of FAO Geopolitical terms.
 
 Upon completion of its execution, it produces an XML document following the schema defined by a simple XSD file, included with the distribution package of the component. The XML presents the terms found in the document ranked according to a modification of the classic tf-idf metric.
 
@@ -40,7 +40,7 @@ Extract Geopolitical terms found in a document
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The user aims to retrieve the references Geopolitical terms found in a text document, named <filename>, found in the local <path> directory. To this end, she executes the GeoPolitical Extractor component from the command line:
 ----
-java -jar AK_Geopolitical.jar <path> <filename> <ontology_path> <ontology_filename>
+java -jar AK_Geopolitical.jar <path> <filename>
 ----
 The components requires the existence of a local copy of the FAO Geopolitical ontology, named <ontology_filename> and located in the <ontology_path> directory of the host system.
 
